@@ -15,15 +15,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Builder
 @Table(name="employee")
+@Entity
 @EntityListeners(AuditingEntityListener.class)
 public class EmployeeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotBlank(message = "Name is required")
+
     private String name;
 
     @NotBlank(message = "Email is required")

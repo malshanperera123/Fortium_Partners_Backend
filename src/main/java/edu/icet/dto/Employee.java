@@ -12,7 +12,7 @@ import lombok.*;
 @Builder
 public class Employee {
     private Integer id;
-    @NotBlank(message = "Name is required")
+
     private String name;
 
     @NotBlank(message = "Email is required")
