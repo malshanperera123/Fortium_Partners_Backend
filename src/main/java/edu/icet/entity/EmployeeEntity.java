@@ -33,7 +33,7 @@ public class EmployeeEntity {
     @NotBlank(message = "Department is required")
     @Pattern(regexp = "HR|IT|Finance|Operations", message = "Department must be HR, IT, Finance, or Operations")
     private String department;
-    private Double salary;
+
 
     @CreatedDate
     @Column(updatable = false)
