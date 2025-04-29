@@ -35,17 +35,18 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void deleteEmployee(Integer id) {
-
+        repository.deleteById(id);
 
     }
 
     @Override
     public void updateEmployee(Employee employee) {
-
+        repository.save(mapper.map(employee,EmployeeEntity.class));
     }
 
     @Override
     public Employee searchEmployeeById(Integer id) {
-        return null;
+
+        return mapper.map(repository.findById(id), Employee.class);
     }
 }
